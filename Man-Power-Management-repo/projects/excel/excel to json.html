@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+       .heightF{
+        height: 25px;
+       }
+       .move{
+            margin:20px 0px 0px 20px;
+       }
+       .mytable,.tdpass{
+            border:1px solid black;
+       }
+       #extodb:hover{
+            border: .1px solid black;
+       }
+    </style>
+</head>
+<body>
+    <div class="move">
+    <form>
+        <div class="mb-2">
+            <label for="formFile" class="form-label">Upload file</label>
+            <br>
+            <input type="file" class="col-sm-5 col-form-control" id="filess" accept=".xlsx,.xls,.xlsm">
+            <input type="button" id="upload" value="Upload File">
+        </div>    
+    </form>
+        <table id="SheetSelect">
+
+        </table>
+    <form>
+        <p id="karthikeyan"></p>
+        <label for="">Database:</label>
+        <input class="mb-2 col-sm-2 col-form-label heightF" type="text" id="DBname">
+        <input type="button" id="extobd" style="padding: 1px;" class="btn btn-info" value="Upload It in Database">
+        <br>
+        <label class="formedit" for="">Create New</label>
+        <input class="mb-2 form-check-input" type="checkbox" id="CreNot" style="width: 20px;height: 20px;">
+        <br>
+        <label class="formedit" for="">Table:</label>
+        <input class=" mb-2 col-sm-2 col-form-label heightF" type="text" id="tablename">
+    </form>
+    <button id="headAttri">Change Head</button>
+    <button id="less" style="display: none;">Less</button>
+    <br>
+    <table id="headerTable">
+
+    </table>
+    <br>
+    <table id="mytable" border="1">
+
+    </table>
+    <p id="temp"></p>
+</div>
+</body>
+<script src="karthi.js"></script>
+</html>
